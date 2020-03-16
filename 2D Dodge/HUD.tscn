@@ -4,12 +4,15 @@
 [ext_resource path="res://HUD.gd" type="Script" id=2]
 
 [sub_resource type="DynamicFont" id=1]
+size = 40
 font_data = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=2]
+size = 28
 font_data = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=3]
+size = 32
 font_data = ExtResource( 1 )
 
 [node name="HUD" type="CanvasLayer"]
@@ -18,11 +21,10 @@ script = ExtResource( 2 )
 [node name="ScoreLabel" type="Label" parent="."]
 anchor_left = 0.5
 anchor_right = 0.5
-margin_left = -70.6094
-margin_top = 30.7272
-margin_right = -30.6094
-margin_bottom = 50.7272
-rect_scale = Vector2( 3.93047, 2.88691 )
+margin_left = -5.49998
+margin_top = 30.1992
+margin_right = 5.50002
+margin_bottom = 50.1992
 custom_fonts/font = SubResource( 1 )
 text = "0"
 align = 1
@@ -35,26 +37,27 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -155.966
-margin_top = -103.203
-margin_right = -4.96606
-margin_bottom = -83.2026
-rect_scale = Vector2( 2.29576, 3.7923 )
+margin_left = -151.199
+margin_top = -17.5
+margin_right = 148.801
+margin_bottom = 17.5
 custom_fonts/font = SubResource( 2 )
 text = "Dodge the Csunya"
 align = 1
+clip_text = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="StartButton" type="Button" parent="."]
+anchor_left = 0.5
 anchor_top = 1.0
+anchor_right = 0.5
 anchor_bottom = 1.0
-margin_left = 159.483
-margin_top = -161.501
-margin_right = 214.483
-margin_bottom = -135.501
-rect_scale = Vector2( 2.68, 2.64 )
+margin_left = -47.5
+margin_top = -165.0
+margin_right = 47.5
+margin_bottom = -120.0
 custom_fonts/font = SubResource( 3 )
 text = "Start"
 __meta__ = {
@@ -62,5 +65,7 @@ __meta__ = {
 }
 
 [node name="MessageTimer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
 [connection signal="pressed" from="StartButton" to="." method="_on_StartButton_pressed"]
 [connection signal="timeout" from="MessageTimer" to="." method="_on_MessageTimer_timeout"]
