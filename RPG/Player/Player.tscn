@@ -137,6 +137,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id=9]
 length = 0.6
+loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
 tracks/0/interp = 1
@@ -226,6 +227,7 @@ states/RunUp/node = SubResource( 17 )
 states/RunUp/position = Vector2( 408, 83 )
 transitions = [ "IdleDown", "RunDown", SubResource( 18 ), "RunDown", "IdleDown", SubResource( 19 ), "IdleLeft", "RunLeft", SubResource( 20 ), "RunLeft", "IdleLeft", SubResource( 21 ), "RunUp", "IdleUp", SubResource( 22 ), "IdleUp", "RunUp", SubResource( 23 ), "IdleRight", "RunRight", SubResource( 24 ), "RunRight", "IdleRight", SubResource( 25 ), "RunUp", "RunRight", SubResource( 26 ), "RunRight", "RunUp", SubResource( 27 ), "RunRight", "RunDown", SubResource( 28 ), "RunDown", "RunRight", SubResource( 29 ), "RunLeft", "RunDown", SubResource( 30 ), "RunDown", "RunLeft", SubResource( 31 ), "RunLeft", "RunUp", SubResource( 32 ), "RunUp", "RunLeft", SubResource( 33 ) ]
 start_node = "IdleRight"
+graph_offset = Vector2( -112.528, 0 )
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=35]
 
